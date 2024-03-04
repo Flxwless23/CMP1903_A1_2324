@@ -8,6 +8,32 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
+
+        public void DiceGame()
+        {
+            Die dieOne = new Die();
+            dieOne.Roll();
+            int dieOneValue = dieOne.CurrentValue;
+
+            Die dieTwo = new Die();
+            dieTwo.Roll();
+            int dieTwoValue = dieTwo.CurrentValue;
+
+            Die dieThree = new Die();
+            dieThree.Roll();
+            int dieThreeValue = dieThree.CurrentValue;
+
+            //Console.WriteLine($"The roll of Die 1 is: {dieOneValue}");
+            //Console.ReadLine();
+            //Console.WriteLine($"The roll of Die 2 is: {dieTwoValue}");
+            //Console.ReadLine();
+            //Console.WriteLine($"The roll of Die 3 is: {dieThreeValue}");
+            //Console.ReadLine();
+            Console.WriteLine($"The total number of the three rolled dice is: {dieOneValue + dieTwoValue + dieThreeValue}");
+            Console.ReadLine();
+        }
+
+
         /*
          * The Game class should create three die objects, roll them, sum and report the total of the three dice rolls.
          *
