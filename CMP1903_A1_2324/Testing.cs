@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,16 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
-        /*
-         * This class should test the Game and the Die class.
-         * Create a Game object, call the methods and compare their output to expected output.
-         * Create a Die object and call its method.
-         * Use debug.assert() to make the comparisons and tests.
-         */
+        public void DieTesting (int value)
+        {
+            Debug.Assert(value <= 6, "Die generated above the value of 6 (Higher boundary)");
+            Debug.Assert(value >= 1, "Die generated below the value of 1 (Low boundary)");
+        }
 
-        //Method
+        public void GameTesting(int value)
+        {
+            Debug.Assert(value <= 18, "Total number is above the value of 18 (Higher boundary)");
+            Debug.Assert(value >= 3, "Total number is below the value of 3 (Lower boundary)");
+        }
     }
 }
